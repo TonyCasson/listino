@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audio Video Rental</title>
+  <link rel="stylesheet" href="style.css" id="theme-style"/>
+</head>
+<body>
+  <div class="theme-toggle">
+    <label>
+      <input type="checkbox" id="themeSwitch" onchange="toggleTheme()" />
+      <span>🌙 Notte / ☀️ Giorno</span>
+    </label>
+  </div>
+
+  <div class="container">
+    <h1>Noleggio Attrezzatura</h1>
+
+    <div class="form-section">
+      <input type="text" id="userName" placeholder="Nome e Cognome" />
+      <input type="text" id="eventLocation" placeholder="Luogo dell'evento" />
+      <input type="date" id="eventDate" />
+    </div>
+
+    <div class="discount-section">
+      <input type="number" id="discount" placeholder="Sconto (es. 0.85)" step="0.01" />
+      <button onclick="applyDiscount()">Applica Sconto</button>
+    </div>
+
+    <div id="equipmentTable"></div>
+
+    <div class="buttons">
+      <button onclick="calculateTotal()">Calcola Totale</button>
+      <button onclick="generatePDF()">Stampa PDF</button>
+      <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <div class="total" id="totalPrice">Totale: €0</div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

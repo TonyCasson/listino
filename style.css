@@ -1,0 +1,112 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 8px;
+  margin: 5px 0;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+}
+
+button {
+  margin: 10px 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #555;
+  text-align: left;
+}
+
+.total {
+  font-size: 1.2em;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.theme-toggle {
+  text-align: right;
+  padding: 10px 20px;
+}
+
+body.dark {
+  background: #111;
+  color: #fff;
+}
+
+body.dark .container {
+  background: #1a1a1a;
+}
+
+body.dark input, body.dark button {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark table {
+  background: #222;
+}
+
+body.dark th, body.dark td {
+  border: 1px solid #444;
+}
+
+body.light {
+  background: #f9f9f9;
+  color: #000;
+}
+
+body.light .container {
+  background: #fff;
+}
+
+body.light input, body.light button {
+  background: #f0f0f0;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+body.light table {
+  background: #fff;
+}
+
+body.light th, body.light td {
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  table, th, td {
+    font-size: 12px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

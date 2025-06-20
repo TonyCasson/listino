@@ -1,0 +1,275 @@
+[
+  {
+    "name": "PROEL V12",
+    "description1": "Descrizione secondaria",
+    "price": 25,
+    "maxQty": 4,
+    "description2": ""
+  },
+  {
+    "name": "EV 12P",
+    "description1": "Descrizione secondaria",
+    "price": 45,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "MONTARBO FIRE 15",
+    "description1": "Descrizione secondaria",
+    "price": 92,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "JBL PRX 715",
+    "description1": "Descrizione secondaria",
+    "price": 70,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "EV  EKX 12P",
+    "description1": "Descrizione secondaria",
+    "price": 62,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "FBT CS1000",
+    "description1": "Descrizione secondaria",
+    "price": 150,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "SUB EV 18",
+    "description1": "Descrizione secondaria",
+    "price": 60,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "SUB FBT  HIMAX 100 SA",
+    "description1": "Descrizione secondaria",
+    "price": 150,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "SUB F118 - PASSIVE + AMP",
+    "description1": "Descrizione secondaria",
+    "price": 150,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "Americana grande, 1,5m",
+    "description1": "Descrizione secondaria",
+    "price": 15,
+    "maxQty": 3,
+    "description2": ""
+  },
+  {
+    "name": "Stativi per Americana grande",
+    "description1": "Descrizione secondaria",
+    "price": 20,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "Totem",
+    "description1": "Descrizione secondaria",
+    "price": 27,
+    "maxQty": 4,
+    "description2": ""
+  },
+  {
+    "name": "Americana completa piccola 3m (con stativi)",
+    "description1": "Descrizione secondaria",
+    "price": 30,
+    "maxQty": 3,
+    "description2": ""
+  },
+  {
+    "name": "Palchetto h=40cm (piattaforma 1mx1m)",
+    "description1": "Descrizione secondaria",
+    "price": 20,
+    "maxQty": 6,
+    "description2": ""
+  },
+  {
+    "name": "Tavolo 1,5m",
+    "description1": "Descrizione secondaria",
+    "price": 25,
+    "maxQty": 6,
+    "description2": ""
+  },
+  {
+    "name": "BEAM 7R",
+    "description1": "Descrizione secondaria",
+    "price": 50,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "BEAM Spot (ELF)",
+    "description1": "Descrizione secondaria",
+    "price": 40,
+    "maxQty": 4,
+    "description2": ""
+  },
+  {
+    "name": "BEAM 30W",
+    "description1": "Descrizione secondaria",
+    "price": 10,
+    "maxQty": 4,
+    "description2": ""
+  },
+  {
+    "name": "BLINDER MATRIX 5X5",
+    "description1": "Descrizione secondaria",
+    "price": 25,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "SDJ",
+    "description1": "Descrizione secondaria",
+    "price": 15,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "PAR RGBW",
+    "description1": "Descrizione secondaria",
+    "price": 5,
+    "maxQty": 8,
+    "description2": ""
+  },
+  {
+    "name": "Yamaha 4 canali",
+    "description1": "Descrizione secondaria",
+    "price": 14,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "Mackie 5 canali",
+    "description1": "Descrizione secondaria",
+    "price": 20,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "SPARKULAR",
+    "description1": "Descrizione secondaria",
+    "price": 100,
+    "maxQty": 4,
+    "description2": ""
+  },
+  {
+    "name": "LED TUBES",
+    "description1": "Descrizione secondaria",
+    "price": 25,
+    "maxQty": 8,
+    "description2": ""
+  },
+  {
+    "name": "UPLIGHTERS",
+    "description1": "Descrizione secondaria",
+    "price": 15,
+    "maxQty": 32,
+    "description2": ""
+  },
+  {
+    "name": "FOG GAYSER: ADJ FURY JET",
+    "description1": "Descrizione secondaria",
+    "price": 25,
+    "maxQty": 4,
+    "description2": ""
+  },
+  {
+    "name": "FOG HAZER: MR KOOL",
+    "description1": "Descrizione secondaria",
+    "price": 10,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "FOG MACHINE SMALL",
+    "description1": "Descrizione secondaria",
+    "price": 7,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "SHURE WIRELESS SM58",
+    "description1": "Descrizione secondaria",
+    "price": 34,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "SHURE SM58 CAVO",
+    "description1": "Descrizione secondaria",
+    "price": 11,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "Mic wirelss (thomann/soundstat.)",
+    "description1": "Descrizione secondaria",
+    "price": 10,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "SAMSON",
+    "description1": "Descrizione secondaria",
+    "price": 3,
+    "maxQty": 2,
+    "description2": ""
+  },
+  {
+    "name": "KIT MICROFONI PER BATTERIA",
+    "description1": "Descrizione secondaria",
+    "price": 30,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "RX1",
+    "description1": "Descrizione secondaria",
+    "price": 120,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "RX2",
+    "description1": "Descrizione secondaria",
+    "price": 190,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "RX3",
+    "description1": "Descrizione secondaria",
+    "price": 230,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "Xone 92",
+    "description1": "Descrizione secondaria",
+    "price": 140,
+    "maxQty": 1,
+    "description2": ""
+  },
+  {
+    "name": "Cdj3000",
+    "description1": "Descrizione secondaria",
+    "price": 250,
+    "maxQty": 2,
+    "description2": ""
+  }
+]
