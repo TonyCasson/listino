@@ -1,273 +1,301 @@
 [
   {
     "name": "PROEL V12",
-    "description1": "Descrizione secondaria",
+    "description1": "Active speaker - 200 WRMS",
     "price": 25,
     "maxQty": 4,
     "description2": ""
   },
   {
     "name": "EV 12P",
-    "description1": "Descrizione secondaria",
+    "description1": "Active speaker 250 WRMS",
     "price": 45,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "MONTARBO FIRE 15",
-    "description1": "Descrizione secondaria",
+    "description1": "Active speaker 1000 WRMS",
     "price": 92,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "JBL PRX 715",
-    "description1": "Descrizione secondaria",
+    "description1": "Active speaker 700 WRMS",
     "price": 70,
+    "maxQty": 2,
+    "description2": ""
+  },
+    {
+    "name": "FLEXSYS F315",
+    "description1": "Active speaker 1000 WRMS",
+    "price": 150,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "EV  EKX 12P",
-    "description1": "Descrizione secondaria",
+    "description1": "Active speaker 750 WRMS,
     "price": 62,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "FBT CS1000",
-    "description1": "Descrizione secondaria",
+    "description1": " 1 Sub + 1 Satellite system - 1000WRMS",
     "price": 150,
     "maxQty": 2,
     "description2": ""
   },
   {
+    "name": "SUB FBT SUBLINE 15SA",
+    "description1": "Active Subwoofer 15" - 600WRMS",
+    "price": 60,
+    "maxQty": 2,
+    "description2": ""
+  },
+    {
     "name": "SUB EV 18",
-    "description1": "Descrizione secondaria",
+    "description1": "Active Subwoofer 18" - 600WRMS",
     "price": 60,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "SUB FBT  HIMAX 100 SA",
-    "description1": "Descrizione secondaria",
+    "description1": "Active Subwoofer 18" - 900WRMS",
     "price": 150,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "SUB F118 - PASSIVE + AMP",
-    "description1": "Descrizione secondaria",
+    "description1": "Passive Subwoofer 15" - Horn loaded - 800WRMS",
     "price": 150,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "Americana grande, 1,5m",
-    "description1": "Descrizione secondaria",
+    "description1": "",
     "price": 15,
     "maxQty": 3,
     "description2": ""
   },
   {
     "name": "Stativi per Americana grande",
-    "description1": "Descrizione secondaria",
+    "description1": "",
     "price": 20,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "Totem",
-    "description1": "Descrizione secondaria",
+    "description1": "Stairville Adjustable Moving Head Tower",
     "price": 27,
     "maxQty": 4,
     "description2": ""
   },
   {
     "name": "Americana completa piccola 3m (con stativi)",
-    "description1": "Descrizione secondaria",
+    "description1": "",
     "price": 30,
     "maxQty": 3,
     "description2": ""
   },
   {
     "name": "Palchetto h=40cm (piattaforma 1mx1m)",
-    "description1": "Descrizione secondaria",
+    "description1": "",
     "price": 20,
     "maxQty": 6,
     "description2": ""
   },
   {
-    "name": "Tavolo 1,5m",
-    "description1": "Descrizione secondaria",
+    "name": "Tavolo 1,5m x 0,5m",
+    "description1": "",
     "price": 25,
-    "maxQty": 6,
+    "maxQty": 2,
     "description2": ""
   },
   {
-    "name": "BEAM 7R",
-    "description1": "Descrizione secondaria",
+    "name": "MOVING HEAD BEAM 7R",
+    "description1": "",
     "price": 50,
     "maxQty": 2,
     "description2": ""
   },
   {
-    "name": "BEAM Spot (ELF)",
-    "description1": "Descrizione secondaria",
+    "name": "MVING HEAD - BEAM Spot (ELF)",
+    "description1": "",
     "price": 40,
     "maxQty": 4,
     "description2": ""
   },
   {
-    "name": "BEAM 30W",
-    "description1": "Descrizione secondaria",
+    "name": "MINI MOVING HEAD - BEAM 30W",
+    "description1": "",
     "price": 10,
     "maxQty": 4,
     "description2": ""
   },
   {
     "name": "BLINDER MATRIX 5X5",
-    "description1": "Descrizione secondaria",
+    "description1": "LED",
     "price": 25,
     "maxQty": 2,
     "description2": ""
   },
   {
-    "name": "SDJ",
-    "description1": "Descrizione secondaria",
+    "name": "PAFR LED RGBWA-UV - SDJ",
+    "description1": "",
     "price": 15,
     "maxQty": 2,
     "description2": ""
   },
   {
-    "name": "PAR RGBW",
-    "description1": "Descrizione secondaria",
+    "name": "MINI PAR RGBW",
+    "description1": "",
     "price": 5,
     "maxQty": 8,
     "description2": ""
   },
+    {
+    "name": "LED BAR - RGBW",
+    "description1": "",
+    "price": 5,
+    "maxQty": 4,
+    "description2": ""
+  },
   {
-    "name": "Yamaha 4 canali",
-    "description1": "Descrizione secondaria",
+    "name": "Mixer - Yamaha 4 canali",
+    "description1": "MG06",
     "price": 14,
     "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "Mackie 5 canali",
-    "description1": "Descrizione secondaria",
+    "name": "Mixer - Mackie 5 canali",
+    "description1": "VLZ4",
     "price": 20,
+    "maxQty": 1,
+    "description2": ""
+  },
+    {
+    "name": "Mixer - Yamaha 16 canali",
+    "description1": "MG16XU",
+    "price": 40,
     "maxQty": 1,
     "description2": ""
   },
   {
     "name": "SPARKULAR",
-    "description1": "Descrizione secondaria",
+    "description1": "Showven MINI",
     "price": 100,
-    "maxQty": 4,
+    "maxQty": 6,
     "description2": ""
   },
   {
     "name": "LED TUBES",
-    "description1": "Descrizione secondaria",
+    "description1": "Battery powered lights + DMX + tripod stand",
     "price": 25,
     "maxQty": 8,
     "description2": ""
   },
   {
-    "name": "UPLIGHTERS",
-    "description1": "Descrizione secondaria",
+    "name": "UPLIGHTERS - SMARTBAT",
+    "description1": "Battery powered lights",
     "price": 15,
     "maxQty": 32,
     "description2": ""
   },
   {
-    "name": "FOG GAYSER: ADJ FURY JET",
-    "description1": "Descrizione secondaria",
+    "name": "FOG GAYSER - ADJ FURY JET",
+    "description1": "Fog machine",
     "price": 25,
     "maxQty": 4,
     "description2": ""
   },
   {
     "name": "FOG HAZER: MR KOOL",
-    "description1": "Descrizione secondaria",
+    "description1": "Hazer",
     "price": 10,
     "maxQty": 1,
     "description2": ""
   },
   {
     "name": "FOG MACHINE SMALL",
-    "description1": "Descrizione secondaria",
+    "description1": "70w mini fog Antari",
     "price": 7,
     "maxQty": 2,
     "description2": ""
   },
   {
-    "name": "SHURE WIRELESS SM58",
-    "description1": "Descrizione secondaria",
+    "name": "MICROPHONE",
+    "description1": "SHURE WIRELESS SM58",
     "price": 34,
     "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "SHURE SM58 CAVO",
-    "description1": "Descrizione secondaria",
+    "name": "MICROPHONE",
+    "description1": "SHURE SM58",
     "price": 11,
     "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "Mic wirelss (thomann/soundstat.)",
-    "description1": "Descrizione secondaria",
-    "price": 10,
-    "maxQty": 2,
+    "name": "MICROPHONE",
+    "description1": "2 x Mic wirelss (thomann/soundstat.)",
+    "price": 11,
+    "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "SAMSON",
-    "description1": "Descrizione secondaria",
+    "name": "MICROPHONE",
+    "description1": "Low quality brand",
     "price": 3,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "KIT MICROFONI PER BATTERIA",
-    "description1": "Descrizione secondaria",
+    "description1": "",
     "price": 30,
     "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "RX1",
-    "description1": "Descrizione secondaria",
+    "name": "DJ CONSOLLE",
+    "description1": "Pioneer RX1",
     "price": 120,
     "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "RX2",
-    "description1": "Descrizione secondaria",
+    "name": "DJ CONSOLLE",
+    "description1": "Pioneer RX2",
     "price": 190,
     "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "RX3",
-    "description1": "Descrizione secondaria",
+    "name": "DJ CONSOLLE",
+    "description1": "Pioneer RX3",
     "price": 230,
     "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "Xone 92",
-    "description1": "Descrizione secondaria",
+    "name": "DJ MIXER",
+    "description1": "ALLEN & HEAT - XONE92",
     "price": 140,
     "maxQty": 1,
     "description2": ""
   },
   {
-    "name": "Cdj3000",
-    "description1": "Descrizione secondaria",
+    "name": "DJ CONSOLLE",
+    "description1": "CDJ3000",
     "price": 250,
     "maxQty": 2,
     "description2": ""
