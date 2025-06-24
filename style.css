@@ -52,6 +52,11 @@ th, td {
 .theme-toggle {
   text-align: right;
   padding: 10px 20px;
+  
+}
+
+.theme-toggle input[type="checkbox"] {
+  display: none;
 }
 
 body.dark {
