@@ -1,46 +1,45 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Audio Video Rental GSC</title>
-  <link rel="stylesheet" href="style.css" id="theme-style"/>
+  <meta charset="UTF-8">
+  <title>Generatore di Preventivo GSC</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="theme-toggle">
-    <label>
-      <input type="checkbox" id="themeSwitch" onchange="toggleTheme()" />
-      <span>🌙 Notte / ☀️ Giorno</span>
-    </label>
-  </div>
 
-  <div class="container">
-    <h1>Audio & Effects Rental - GSC</h1>
-
-    <div class="form-section">
-      <input type="text" id="userName" placeholder="Nome e Cognome" />
-      <input type="text" id="eventLocation" placeholder="Luogo dell'evento" />
-      <input type="date" id="eventDate" />
+  <body>
+    <div style="position: absolute; top: 10px; right: 10px;">
+      <button id="themeButton" onclick="toggleTheme()" style="font-size: 20px; background: none; border: none; cursor: pointer;">
+        🌑
+      </button>
     </div>
 
-    <div class="discount-section">
-      <input type="number" id="discount" placeholder="Sconto (es. 0.85)" step="0.01" />
-      <button onclick="applyDiscount()">Applica Sconto</button>
-    </div>
+    
+  <h1>Audio & Effects Rental -  GSC</h1>
 
-    <div id="equipmentTable"></div>
+  <label for="userName">Nome:</label>
+  <input id="userName" type="text" placeholder="Nome cliente">
 
-    <div class="buttons">
-      <button onclick="calculateTotal()">Calcola Totale</button>
-      <button onclick="generatePDF()">Stampa PDF</button>
-      <button onclick="resetForm()">Reset</button>
-    </div>
+  <label for="eventLocation">Luogo:</label>
+  <input id="eventLocation" type="text" placeholder="Luogo evento">
 
-    <div class="total" id="totalPrice">Totale: €0</div>
-  </div>
+  <label for="eventDate">Data:</label>
+  <input id="eventDate" type="date">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <label for="discount">Sconto (%):</label>
+  <input id="discount" type="number" min="0" max="100" placeholder="0" onchange="applyDiscount()">
+
+  <div id="equipmentTable"></div>
+
+
+  
+  <button onclick="calculateTotal()">Calcola Totale</button>
+  <p id="totalPrice">Totale: €0</p>
+
+  <button onclick="showSummaryModal()">Mostra Riepilogo</button>
+  <button onclick="resetForm()">Reset</button>
+
+
   <script src="main.js"></script>
 </body>
 </html>
