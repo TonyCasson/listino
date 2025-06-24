@@ -36,7 +36,7 @@
   },
   {
     "name": "EV  EKX 12P",
-    "description1": "Active speaker 750 WRMS,
+    "description1": "Active speaker 750 WRMS",
     "price": 62,
     "maxQty": 2,
     "description2": ""
@@ -50,28 +50,28 @@
   },
   {
     "name": "SUB FBT SUBLINE 15SA",
-    "description1": "Active Subwoofer 15" - 600WRMS",
+    "description1": "Active Subwoofer 15'' - 600 WRMS",
     "price": 60,
     "maxQty": 2,
     "description2": ""
   },
     {
     "name": "SUB EV 18",
-    "description1": "Active Subwoofer 18" - 600WRMS",
+    "description1": "Active Subwoofer 18'' - 600WRMS",
     "price": 60,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "SUB FBT  HIMAX 100 SA",
-    "description1": "Active Subwoofer 18" - 900WRMS",
+    "description1": "Active Subwoofer 18'' - 900WRMS",
     "price": 150,
     "maxQty": 2,
     "description2": ""
   },
   {
     "name": "SUB F118 - PASSIVE + AMP",
-    "description1": "Passive Subwoofer 15" - Horn loaded - 800WRMS",
+    "description1": "Passive Subwoofer 15'' - Horn loaded - 800WRMS",
     "price": 150,
     "maxQty": 2,
     "description2": ""
