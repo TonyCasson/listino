@@ -205,3 +205,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('themeButton');
   button.textContent = isLight ? '🌕' : '🌑';
 });
+
