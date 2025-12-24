@@ -4,42 +4,55 @@
   <meta charset="UTF-8">
   <title>Generatore di Preventivo GSC</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
 
 </head>
 <body>
+  <div style="position: absolute; top: 10px; right: 10px;">
+    <button id="themeButton" onclick="toggleTheme()" style="font-size: 14px; background: none; border: none; cursor: pointer; padding: 8px 16px;">
+      Theme
+    </button>
+  </div>
 
-  <body>
-    <div style="position: absolute; top: 10px; right: 10px;">
-      <button id="themeButton" onclick="toggleTheme()" style="font-size: 20px; background: none; border: none; cursor: pointer;">
-        🌑
-      </button>
-    </div>
-
-    
   <h1>Audio & Effects Rental -  GSC</h1>
 
-  <label for="userName">Nome:</label>
-  <input id="userName" type="text" placeholder="Nome cliente">
+  <div class="form-grid">
+    <div class="form-field">
+      <label for="userName">Name:</label>
+      <input id="userName" type="text" placeholder="Client name" oninput="calculateTotal()">
+    </div>
 
-  <label for="eventLocation">Luogo:</label>
-  <input id="eventLocation" type="text" placeholder="Luogo evento">
+    <div class="form-field">
+      <label for="eventLocation">Location:</label>
+      <input id="eventLocation" type="text" placeholder="Event location" oninput="calculateTotal()">
+    </div>
 
-  <label for="eventDate">Data:</label>
-  <input id="eventDate" type="date">
+    <div class="form-field">
+      <label for="eventDate">Date:</label>
+      <input id="eventDate" type="date" onchange="calculateTotal()">
+    </div>
 
-  <label for="discount">Sconto (%):</label>
-  <input id="discount" type="number" min="0" max="100" placeholder="0" onchange="applyDiscount()">
+    <div class="form-field">
+      <label for="discount">Discount (%):</label>
+      <input id="discount" type="number" min="0" max="100" placeholder="0" onchange="applyDiscount()">
+    </div>
+  </div>
+
+  <div class="sticky-total">
+    <p id="totalPrice">Total: €0</p>
+  </div>
 
   <div id="equipmentTable"></div>
 
+  <button id="btnAddItem" onclick="openAddItemModal()">+ Add Item</button>
+  <button id="btnBulkEdit" onclick="openBulkEditModal()">Bulk Edit</button>
 
-  
-  <button onclick="calculateTotal()">Calcola Totale</button>
-  <p id="totalPrice">Totale: €0</p>
-
-  <button onclick="showSummaryModal()">Mostra Riepilogo</button>
+  <button id="btnShowSummary" onclick="showSummaryModal()">Show Summary</button>
   <button onclick="resetForm()">Reset</button>
+  <button id="btnResetOriginal" onclick="resetToOriginal()">Reset to Original</button>
+  <button id="btnExport" onclick="exportJSON()">Export JSON</button>
 
 
   <script src="main.js"></script>
