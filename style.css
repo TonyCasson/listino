@@ -336,11 +336,6 @@ tr[draggable="true"]:hover {
     padding: 5px 3px;
   }
   
-  /* Nascondi dettagli tecnici su mobile */
-  td > div > div:nth-child(2) {
-    display: none;
-  }
-  
   .qty-controls {
     gap: 2px;
   }
