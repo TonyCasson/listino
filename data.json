@@ -11,7 +11,7 @@
   {
     "name": "EV 12P",
     "category": "Speakers",
-    "description1": "Active speaker 12\" 250 WRMS",
+    "description1": "Active speaker 12",
     "price": 45,
     "maxQty": 2,
     "imageUrl": "",
@@ -20,7 +20,7 @@
   {
     "name": "MONTARBO FIRE 15",
     "category": "Speakers",
-    "description1": "Active speaker 15\" 2-way 1000 WRMS",
+    "description1": "Active speaker 15",
     "price": 92,
     "maxQty": 2,
     "imageUrl": "",
@@ -104,7 +104,7 @@
     "description1": "",
     "price": 15,
     "maxQty": 3,
-    "imageUrl": "",
+    "imageUrl": "images/traliccio15.png",
     "description2": ""
   },
   {
@@ -113,7 +113,7 @@
     "description1": "",
     "price": 20,
     "maxQty": 2,
-    "imageUrl": "",
+    "imageUrl": "images/elevatore85.png",
     "description2": ""
   },
   {
@@ -123,7 +123,10 @@
     "price": 27,
     "maxQty": 4,
     "imageUrl": "",
-    "description2": ""
+    "description2": "",
+    "imageUrls": [
+      "images/totem.png"
+    ]
   },
   {
     "name": "Small Truss system",
@@ -132,7 +135,10 @@
     "price": 30,
     "maxQty": 3,
     "imageUrl": "",
-    "description2": ""
+    "description2": "",
+    "imageUrls": [
+      "images/fulltruss.png"
+    ]
   },
   {
     "name": "Stage h=40cm (platform 1mx1m)",
@@ -141,7 +147,10 @@
     "price": 20,
     "maxQty": 6,
     "imageUrl": "",
-    "description2": ""
+    "description2": "",
+    "imageUrls": [
+      "images/stage.png"
+    ]
   },
   {
     "name": "DJ table 1,2m x 0,5m",
@@ -245,11 +254,12 @@
   {
     "name": "SPARKULAR",
     "category": "Special Effects",
-    "description1": "Showven MINI *DUST not included",
-    "price": 100,
+    "description1": "Showven MINI + 0.5 dusk charge included",
+    "price": 110,
     "maxQty": 6,
     "imageUrl": "",
-    "description2": ""
+    "description2": "",
+    "imageUrls": []
   },
   {
     "name": "LED TUBES",
@@ -257,6 +267,15 @@
     "description1": "Battery powered lights + DMX + tripod stand",
     "price": 25,
     "maxQty": 8,
+    "imageUrl": "",
+    "description2": ""
+  },
+  {
+    "name": "PORT FLOWER 7",
+    "category": "Lights",
+    "description1": "Vintage effect, warm light + RGB",
+    "price": 48,
+    "maxQty": 2,
     "imageUrl": "",
     "description2": ""
   },

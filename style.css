@@ -256,6 +256,60 @@ tr:last-child td {
   border-bottom: none;
 }
 
+/* Photo icon styling */
+.photo-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+  opacity: 0.5;
+  position: relative;
+  top: -1px;
+}
+
+.photo-icon::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Crect x="3" y="3" width="18" height="18" rx="2" ry="2"/%3E%3Ccircle cx="8.5" cy="8.5" r="1.5"/%3E%3Cpolyline points="21 15 16 10 5 21"/%3E%3C/svg%3E');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body.dark .photo-icon::before {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238e8e93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Crect x="3" y="3" width="18" height="18" rx="2" ry="2"/%3E%3Ccircle cx="8.5" cy="8.5" r="1.5"/%3E%3Cpolyline points="21 15 16 10 5 21"/%3E%3C/svg%3E');
+}
+
+/* Warning message for required fields */
+.fields-warning {
+  background: rgba(255, 149, 0, 0.1);
+  border: 2px solid rgba(255, 149, 0, 0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #ff9500;
+  text-align: center;
+  font-weight: 500;
+}
+
+body.dark .fields-warning {
+  background: rgba(255, 149, 0, 0.15);
+  border-color: rgba(255, 149, 0, 0.4);
+  color: #ffa500;
+}
+
+/* Highlight row when quantity > 0 */
+tr.row-selected {
+  background: rgba(0, 122, 255, 0.08);
+  transition: background 0.3s ease;
+}
+
+body.dark tr.row-selected {
+  background: rgba(0, 122, 255, 0.15);
+}
+
 /* Stile per drag & drop */
 body.dark tr[draggable="true"]:hover {
   background: rgba(255, 255, 255, 0.05);

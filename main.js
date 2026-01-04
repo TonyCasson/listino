@@ -1,5 +1,5 @@
 // Admin Mode: cambia a false per nascondere controlli di editing
-const ADMIN_MODE = false;
+const ADMIN_MODE = true;
 
 let equipment = [];
 let discountMultiplier = 1;
@@ -76,10 +76,13 @@ function renderTable() {
       const nameClickable = hasImages ? `onclick="showImageGallery(${index})" style="cursor: pointer;"` : '';
       const draggableAttr = ADMIN_MODE ? `draggable="true" ondragstart="dragStart(event, ${index})" ondragover="dragOver(event)" ondrop="drop(event, ${index})" style="cursor: move;"` : '';
       html += `
-        <tr ${draggableAttr} data-index="${index}">
+        <tr ${draggableAttr} data-index="${index}" id="row-${index}">
           <td ${nameClickable}>
             <div style="line-height: 1.4;">
-              <div style="font-weight: 500;">${item.name}</div>
+              <div style="font-weight: 500;">
+                ${item.name}
+                ${hasImages ? '<span class="photo-icon"></span>' : ''}
+              </div>
               ${item.description1 ? `<div style="font-size: 0.85em; color: #86868b; margin-top: 2px;">${item.description1}</div>` : ''}
             </div>
           </td>
@@ -122,6 +125,9 @@ function renderTable() {
     btnShowSummary.style.opacity = '0.5';
     btnShowSummary.style.cursor = 'not-allowed';
   }
+  
+  // Aggiorna lo stato dei controlli quantità
+  setTimeout(() => updateQuantityControls(), 0);
 }
 
 function moveItem(index, direction) {
@@ -180,6 +186,10 @@ function drop(event, dropIndex) {
 }
 
 function changeQty(index, delta) {
+  if (!checkRequiredFields()) {
+    return;
+  }
+  
   const input = document.getElementById(`qty-${index}`);
   const maxQty = parseInt(input.getAttribute('max'));
   let value = parseInt(input.value) || 0;
@@ -192,6 +202,7 @@ function changeQty(index, delta) {
   
   value = Math.max(0, newValue);
   input.value = value;
+  highlightRow(index, value);
   calculateTotal();
 }
 
@@ -202,6 +213,11 @@ function handleQuantityInput(input, maxQty) {
     input.value = maxQty;
     showMaxQuantityTooltip(input, maxQty);
   }
+  
+  // Estrai l'indice dall'id dell'input
+  const index = parseInt(input.id.split('-')[1]);
+  const finalValue = parseInt(input.value) || 0;
+  highlightRow(index, finalValue);
 }
 
 function showMaxQuantityTooltip(input, maxQty) {
@@ -255,6 +271,66 @@ function showMaxQuantityTooltip(input, maxQty) {
   }, 2000);
 }
 
+function highlightRow(index, quantity) {
+  const row = document.getElementById(`row-${index}`);
+  if (row) {
+    if (quantity > 0) {
+      row.classList.add('row-selected');
+    } else {
+      row.classList.remove('row-selected');
+    }
+  }
+}
+
+
+function checkRequiredFields() {
+  const name = document.getElementById('userName').value.trim();
+  const location = document.getElementById('eventLocation').value.trim();
+  const date = document.getElementById('eventDate').value.trim();
+  const discount = document.getElementById('discount').value.trim();
+  
+  return name !== '' && location !== '' && date !== '' && discount !== '';
+}
+
+function updateQuantityControls() {
+  const allFilled = checkRequiredFields();
+  
+  equipment.forEach((item, index) => {
+    const qtyInput = document.getElementById(`qty-${index}`);
+    const qtyControls = qtyInput ? qtyInput.parentElement : null;
+    
+    if (qtyControls) {
+      const buttons = qtyControls.querySelectorAll('button');
+      buttons.forEach(btn => {
+        btn.disabled = !allFilled;
+        btn.style.opacity = allFilled ? '1' : '0.3';
+        btn.style.cursor = allFilled ? 'pointer' : 'not-allowed';
+      });
+      
+      qtyInput.disabled = !allFilled;
+      qtyInput.style.opacity = allFilled ? '1' : '0.5';
+      qtyInput.style.cursor = allFilled ? 'text' : 'not-allowed';
+    }
+  });
+  
+  // Mostra/nascondi messaggio
+  let warningMsg = document.getElementById('fieldsWarning');
+  if (!allFilled) {
+    if (!warningMsg) {
+      warningMsg = document.createElement('div');
+      warningMsg.id = 'fieldsWarning';
+      warningMsg.className = 'fields-warning';
+      warningMsg.textContent = '⚠️ Please fill in all fields above (Name, Location, Date, Discount) before selecting items';
+      
+      const tableDiv = document.getElementById('equipmentTable');
+      tableDiv.parentNode.insertBefore(warningMsg, tableDiv);
+    }
+  } else {
+    if (warningMsg) {
+      warningMsg.remove();
+    }
+  }
+}
 
 function applyDiscount() {
   const input = document.getElementById('discount').value;
@@ -265,15 +341,26 @@ function applyDiscount() {
     discountMultiplier = 1 - (discountPercent / 100);
   }
   renderTable();
+  updateQuantityControls();
 }
 
 function calculateTotal() {
-  let total = 0;
+  let totalWithoutDiscount = 0;
+  let totalWithDiscount = 0;
+  
   equipment.forEach((item, index) => {
     const qty = parseInt(document.getElementById(`qty-${index}`).value) || 0;
-    total += qty * item.price * discountMultiplier;
+    totalWithoutDiscount += qty * item.price;
+    totalWithDiscount += qty * item.price * discountMultiplier;
   });
-  document.getElementById('totalPrice').textContent = `Totale: ${currencyFormatter.format(total)}`;
+  
+  // Mostra entrambi i totali su una riga
+  const totalElement = document.getElementById('totalPrice');
+  if (discountMultiplier < 1 && totalWithoutDiscount > 0) {
+    totalElement.innerHTML = `<span style="text-decoration: line-through; opacity: 0.6; margin-right: 12px;">${currencyFormatter.format(totalWithoutDiscount)}</span><span style="color: #007AFF; font-weight: 700;">Total: ${currencyFormatter.format(totalWithDiscount)}</span>`;
+  } else {
+    totalElement.textContent = `Total: ${currencyFormatter.format(totalWithDiscount)}`;
+  }
   
   // Abilita/disabilita Show Summary in base ai dati compilati e al totale
   const btnShowSummary = document.getElementById('btnShowSummary');
@@ -283,7 +370,7 @@ function calculateTotal() {
     const date = document.getElementById('eventDate').value.trim();
     
     // Abilita solo se ci sono tutti i dati e almeno un item selezionato
-    if (total > 0 && name && location && date) {
+    if (totalWithDiscount > 0 && name && location && date) {
       btnShowSummary.disabled = false;
       btnShowSummary.style.opacity = '1';
       btnShowSummary.style.cursor = 'pointer';
@@ -598,58 +685,61 @@ function showSummaryModal() {
     </body></html>`);
   summaryWindow.document.close();
   
-  summaryWindow.document.getElementById('nameSpan').textContent = name;
-  summaryWindow.document.getElementById('locationSpan').textContent = location;
-  summaryWindow.document.getElementById('dateSpan').textContent = date;
-  
-  const tbody = summaryWindow.document.querySelector('#itemsTable tbody');
-  
-  let subtotal = 0;
+  // Attendi che il DOM sia completamente caricato prima di manipolarlo
+  setTimeout(() => {
+    summaryWindow.document.getElementById('nameSpan').textContent = name;
+    summaryWindow.document.getElementById('locationSpan').textContent = location;
+    summaryWindow.document.getElementById('dateSpan').textContent = date;
+    
+    const tbody = summaryWindow.document.querySelector('#itemsTable tbody');
+    
+    let subtotal = 0;
 
-  equipment.forEach((item, index) => {
-    const qty = parseInt(document.getElementById(`qty-${index}`).value) || 0;
-    if (qty > 0) {
-      subtotal += qty * item.price;
-      
-      const row = summaryWindow.document.createElement('tr');
-      
-      const cellName = summaryWindow.document.createElement('td');
-      cellName.innerHTML = `<div class="item-name">${item.name}</div>`;
-      
-      const cellDesc = summaryWindow.document.createElement('td');
-      cellDesc.innerHTML = `<div class="item-desc">${item.description1 || '-'}</div>`;
-      
-      const cellQty = summaryWindow.document.createElement('td');
-      cellQty.className = 'qty';
-      cellQty.textContent = qty;
-      
-      const cellTotal = summaryWindow.document.createElement('td');
-      cellTotal.className = 'price';
-      cellTotal.textContent = currencyFormatter.format(qty * item.price);
-      
-      row.appendChild(cellName);
-      row.appendChild(cellDesc);
-      row.appendChild(cellQty);
-      row.appendChild(cellTotal);
-      tbody.appendChild(row);
+    equipment.forEach((item, index) => {
+      const qty = parseInt(document.getElementById(`qty-${index}`).value) || 0;
+      if (qty > 0) {
+        subtotal += qty * item.price;
+        
+        const row = summaryWindow.document.createElement('tr');
+        
+        const cellName = summaryWindow.document.createElement('td');
+        cellName.innerHTML = `<div class="item-name">${item.name}</div>`;
+        
+        const cellDesc = summaryWindow.document.createElement('td');
+        cellDesc.innerHTML = `<div class="item-desc">${item.description1 || '-'}</div>`;
+        
+        const cellQty = summaryWindow.document.createElement('td');
+        cellQty.className = 'qty';
+        cellQty.textContent = qty;
+        
+        const cellTotal = summaryWindow.document.createElement('td');
+        cellTotal.className = 'price';
+        cellTotal.textContent = currencyFormatter.format(qty * item.price);
+        
+        row.appendChild(cellName);
+        row.appendChild(cellDesc);
+        row.appendChild(cellQty);
+        row.appendChild(cellTotal);
+        tbody.appendChild(row);
+      }
+    });
+    
+    // Calcola sconto e totale
+    const discountPercent = parseFloat(document.getElementById('discount').value) || 0;
+    const discountAmount = subtotal * (discountPercent / 100);
+    const total = subtotal - discountAmount;
+    
+    // Popola i valori
+    summaryWindow.document.getElementById('subtotalPara').textContent = currencyFormatter.format(subtotal);
+    summaryWindow.document.getElementById('totalPara').textContent = currencyFormatter.format(total);
+    
+    // Mostra la riga sconto solo se > 0
+    if (discountPercent > 0) {
+      summaryWindow.document.getElementById('discountRow').style.display = 'flex';
+      summaryWindow.document.getElementById('discountPercent').textContent = `(${discountPercent}%)`;
+      summaryWindow.document.getElementById('discountAmount').textContent = '- ' + currencyFormatter.format(discountAmount);
     }
-  });
-  
-  // Calcola sconto e totale
-  const discountPercent = parseFloat(document.getElementById('discount').value) || 0;
-  const discountAmount = subtotal * (discountPercent / 100);
-  const total = subtotal - discountAmount;
-  
-  // Popola i valori
-  summaryWindow.document.getElementById('subtotalPara').textContent = currencyFormatter.format(subtotal);
-  summaryWindow.document.getElementById('totalPara').textContent = currencyFormatter.format(total);
-  
-  // Mostra la riga sconto solo se > 0
-  if (discountPercent > 0) {
-    summaryWindow.document.getElementById('discountRow').style.display = 'flex';
-    summaryWindow.document.getElementById('discountPercent').textContent = `(${discountPercent}%)`;
-    summaryWindow.document.getElementById('discountAmount').textContent = '- ' + currencyFormatter.format(discountAmount);
-  }
+  }, 100);
 }
 
 
@@ -686,6 +776,11 @@ function handleQuantityInput(input, maxQty) {
     input.value = maxQty;
     showMaxQuantityTooltip(input, maxQty);
   }
+  
+  // Estrai l'indice dall'id dell'input
+  const index = parseInt(input.id.split('-')[1]);
+  const finalValue = parseInt(input.value) || 0;
+  highlightRow(index, finalValue);
 }
 
 function showMaxQuantityTooltip(input, maxQty) {

@@ -21,17 +21,17 @@
   <div class="form-grid">
     <div class="form-field">
       <label for="userName">Name:</label>
-      <input id="userName" type="text" placeholder="Client name" oninput="calculateTotal()">
+      <input id="userName" type="text" placeholder="Client name" oninput="calculateTotal(); updateQuantityControls()">
     </div>
 
     <div class="form-field">
       <label for="eventLocation">Location:</label>
-      <input id="eventLocation" type="text" placeholder="Event location" oninput="calculateTotal()">
+      <input id="eventLocation" type="text" placeholder="Event location" oninput="calculateTotal(); updateQuantityControls()">
     </div>
 
     <div class="form-field">
       <label for="eventDate">Date:</label>
-      <input id="eventDate" type="date" onchange="calculateTotal()">
+      <input id="eventDate" type="date" onchange="calculateTotal(); updateQuantityControls()">
     </div>
 
     <div class="form-field">
