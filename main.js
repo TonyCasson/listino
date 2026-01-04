@@ -1,5 +1,5 @@
 // Admin Mode: cambia a false per nascondere controlli di editing
-const ADMIN_MODE = true;
+const ADMIN_MODE = false;
 
 let equipment = [];
 let discountMultiplier = 1;
